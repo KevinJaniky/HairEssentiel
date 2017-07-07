@@ -1,8 +1,8 @@
 #conf
-conf.php
 
 # IntelliJ project files
 .idea
 *.iml
 out
 gen
+/conf.php
