@@ -1,0 +1,108 @@
+@charset "UTF-8";
+body {
+  background: #f98250; }
+
+header {
+  text-align: center;
+  padding: 35px;
+  background: #fbf5e7;
+  max-height: 300px; }
+  header img {
+    height: 100%;
+    width: auto; }
+
+nav.navbar {
+  height: 70px; }
+  nav.navbar .container-fluid {
+    height: 100%; }
+  nav.navbar .navbar-collapse {
+    display: flex !important; }
+  nav.navbar ul.navbar-nav {
+    flex: 1;
+    height: 100%; }
+    nav.navbar ul.navbar-nav#nav-princ {
+      flex: 3; }
+      nav.navbar ul.navbar-nav#nav-princ li {
+        margin: 0 35px; }
+    nav.navbar ul.navbar-nav a {
+      height: 100%;
+      line-height: 40px; }
+      nav.navbar ul.navbar-nav a:hover {
+        color: #97e57f; }
+
+.MyCarousel {
+  height: 465px;
+  overflow: hidden;
+  position: relative; }
+  .MyCarousel .owl-nav {
+    position: absolute;
+    top: 10px;
+    width: 100%; }
+    .MyCarousel .owl-nav .owl-prev {
+      float: left;
+      padding: 10px;
+      background: RGBa(255, 255, 255, 0.7); }
+      .MyCarousel .owl-nav .owl-prev:hover {
+        background: RGBa(255, 255, 255, 0.9); }
+    .MyCarousel .owl-nav .owl-next {
+      float: right;
+      padding: 10px;
+      background: RGBa(255, 255, 255, 0.7); }
+      .MyCarousel .owl-nav .owl-next:hover {
+        background: RGBa(255, 255, 255, 0.9); }
+
+.main {
+  display: flex;
+  margin: 30px 0; }
+  .main aside {
+    flex: 1; }
+    .main aside .description {
+      padding: 15px;
+      background: white; }
+      .main aside .description .img-d {
+        background: url(/media/salon_presentation.jpg);
+        width: 100px;
+        border-radius: 50%;
+        height: 100px;
+        background-size: cover;
+        background-position: center;
+        margin: auto; }
+      .main aside .description p {
+        text-align: justify;
+        margin: 20px;
+        line-height: 25px; }
+    .main aside .reseaux_sociaux {
+      list-style: none;
+      display: flex;
+      margin: 20px 0;
+      padding: 20px;
+      background: white; }
+      .main aside .reseaux_sociaux li {
+        flex: 1;
+        text-align: center; }
+        .main aside .reseaux_sociaux li a {
+          color: black; }
+    .main aside .proverbe {
+      margin: 20px 0;
+      padding: 40px;
+      background: white;
+      position: relative;
+      text-align: justify; }
+      .main aside .proverbe:before {
+        content: '«';
+        position: absolute;
+        top: 5px;
+        left: 21px;
+        font-size: 30px;
+        color: #585858; }
+      .main aside .proverbe:after {
+        content: '»';
+        position: absolute;
+        bottom: 5px;
+        right: 21px;
+        font-size: 30px;
+        color: #585858; }
+  .main .homepage {
+    margin-right: 30px;
+    flex: 3;
+    display: flex; }

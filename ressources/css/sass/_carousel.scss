@@ -1,0 +1,28 @@
+.MyCarousel {
+  height: 465px;
+  overflow: hidden;
+  position: relative;
+  .owl-nav {
+    position: absolute;
+    top: 10px;
+    width: 100%;
+
+    .owl-prev {
+      float: left;
+      padding: 10px;
+      background: RGBa(255,255,255,0.7);
+
+      &:hover {
+        background: RGBa(255,255,255,0.9);
+      }
+    }
+    .owl-next {
+      float: right;
+      padding: 10px;
+      background: RGBa(255,255,255,0.7);
+      &:hover {
+        background: RGBa(255,255,255,0.9);
+      }
+    }
+  }
+}

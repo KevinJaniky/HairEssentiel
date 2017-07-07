@@ -1,0 +1,76 @@
+.main {
+  display: flex;
+  margin:30px 0;
+
+  aside {
+    flex:1;
+    .description {
+      padding:15px;
+      background: white;
+
+      .img-d {
+        background: url(/media/salon_presentation.jpg);
+        width: 100px;
+        border-radius: 50%;
+        height: 100px;
+        background-size:cover;
+        background-position: center;
+        margin:auto;
+      }
+
+      p {
+        text-align: justify;
+        margin: 20px;
+        line-height: 25px;
+      }
+    }
+
+    .reseaux_sociaux {
+      list-style: none;
+      display: flex;
+      margin:20px 0;
+      padding: 20px;
+      background: white;
+
+      li {
+        flex: 1;
+        text-align: center;
+        a {
+          color: black;
+        }
+      }
+    }
+    .proverbe {
+      margin:20px 0;
+      padding: 40px;
+      background: white;
+      position: relative;
+      text-align: justify;
+
+      &:before {
+        content: '«';
+        position: absolute;
+        top: 5px;
+        left: 21px;
+        font-size: 30px;
+        color: #585858;
+      }
+
+      &:after {
+        content: '»';
+        position: absolute;
+        bottom: 5px;
+        right: 21px;
+        font-size: 30px;
+        color: #585858;
+      }
+    }
+  }
+
+    .homepage {
+      margin-right:30px;
+      flex:3;
+      display: flex;
+    }
+
+}

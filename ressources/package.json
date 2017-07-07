@@ -1,0 +1,18 @@
+{
+  "name": "HairEssentiel",
+  "version": "2.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "build-css": "node-sass --include-path scss css/app.scss css/app.css",
+    "build-css-compressed": "node-sass --include-path scss css/app.scss css/app.min.css --output-style compressed",
+    "watch-css": "nodemon -e scss -x 'npm run build-css'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^3.13.0",
+    "nodemon": "^1.11.0"
+  }
+}
