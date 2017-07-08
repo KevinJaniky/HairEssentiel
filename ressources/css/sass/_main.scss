@@ -2,6 +2,10 @@
   display: flex;
   margin:30px 0;
 
+  @media screen and (max-width:980px) {
+    display: block;
+  }
+
   aside {
     flex:1;
     .description {
@@ -47,6 +51,10 @@
       position: relative;
       text-align: justify;
 
+      @media screen and (max-width:980px){
+        text-align: center;
+      }
+
       &:before {
         content: '«';
         position: absolute;
@@ -71,6 +79,11 @@
       margin-right:30px;
       flex:3;
       display: flex;
+      flex-wrap: wrap;
+
+      @media screen and (max-width:980px){
+        margin-right:0;
+      }
     }
 
 }

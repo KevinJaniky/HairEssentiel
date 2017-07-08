@@ -1,3 +1,20 @@
 body {
-  background: #f98250;
+  background: #e8e8e8;
+}
+
+.container {
+  max-width:1400px !important;
+  width:inherit;
+}
+
+.btn-hair {
+  background: $greenhover;
+  border-radius: 0;
+  color: white;
+  font-weight: bold;
+
+  &:hover {
+    color: white;
+    background: $green;
+  }
 }

@@ -16,6 +16,7 @@ class Display {
                 <link rel='icon' href='/media/favicon.png'>
                 <link rel=\"stylesheet\" href=\"/ressources/bootstrap/css/bootstrap.min.css\">
                 <link rel=\"stylesheet\" href=\"/ressources/owl-carousel/assets/owl.carousel.min.css\">
+                <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
                 <link rel=\"stylesheet\" href=\"/ressources/css/app.css\">
             
                 <script src=\"/ressources/bootstrap/js/jquery.js\"></script>
@@ -47,9 +48,9 @@ class Display {
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav rs">
-                <li><a href="#">f</a></li>
-                <li><a href="#">t</a></li>
-                <li><a href="#">G+</a></li>
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
             </ul>
 
             <ul class="nav navbar-nav " id="nav-princ">
@@ -90,9 +91,9 @@ class Display {
         </p>
     </div>
     <ul class="reseaux_sociaux">
-       <li><a href="#" target="_blank">f</a></li>
-       <li><a href="#" target="_blank">t</a></li>
-       <li><a href="#" target="_blank">G+</a></li>
+       <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+       <li><a href="#" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+       <li><a href="#" target="_blank"><i class="fa fa-youtube"></i></a></li>
     </ul>
     <p class="proverbe">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque aliquam ac sapien ac faucibus amet.
@@ -113,6 +114,7 @@ class Display {
     <div class="footer-link">
         <div class="links">
             <ul>
+                <li>Liens Utiles</li>
                 <li><a href="/Salon">A propos de moi</a></li>
                 <li><a href="/Offres">Nos Offres</a></li>
                 <li><a href="/Blog">Mon Blog</a></li>
@@ -122,18 +124,19 @@ class Display {
         </div>
         <div class="follow">
             <ul>
+                <li>Me suivre</li>
                 <li><a href="#">Facebook</a></li>
                 <li><a href="#">Twitter</a></li>
                 <li><a href="#">Youtube</a></li>
             </ul>
         </div>
-        <div class="Newsletter">
+        <div class="newsletter">
             <form action="">
                 <div class="form-group">
                     <label for="mail">NewsLetter</label>
                     <input type="email" id="mail" placeholder="Votre mail" class="form-control">
                 </div>
-                <input type="submit" class="btn" value="S\'abonner">
+                <input type="submit" class="btn btn-hair" value="S\'abonner">
             </form>
         </div>
     </div>

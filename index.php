@@ -16,13 +16,55 @@ $display->Navigation();
 
         <div class="homepage">
             <article class="article_remonter">
-                <div class="image"></div>
-                <h2>Lorem ipsum dolor sit amet, consectetur adipiscing volutpat.</h2>
-                <div class="info">
-                    Le 15 janvier 2018
+                <a href="#" class="image" style="background: url(/media/testcarousel.jpg)"></a>
+                <div class="content_art">
+                    <h2><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing volutpat.</a></h2>
+                    <div class="info">
+                        Le 15 janvier 2018
+                    </div>
+                    <div class="resume">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean risus tellus, consequat ac
+                        congue in, pharetra sit amet metus. In eget volutpat felis cras amet.
+                    </div>
                 </div>
-                <div class="resume">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean risus tellus, consequat ac congue in, pharetra sit amet metus. In eget volutpat felis cras amet.
+            </article>
+            <article class="article_remonter">
+                <a href="#" class="image" style="background: url(/media/testcarousel.jpg)"></a>
+                <div class="content_art">
+                    <h2><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing volutpat.</a></h2>
+                    <div class="info">
+                        Le 15 janvier 2018
+                    </div>
+                    <div class="resume">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean risus tellus, consequat ac
+                        congue in, pharetra sit amet metus. In eget volutpat felis cras amet.
+                    </div>
+                </div>
+            </article>
+            <article class="article_remonter">
+                <a href="#" class="image" style="background: url(/media/testcarousel.jpg)"></a>
+                <div class="content_art">
+                    <h2><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing volutpat.</a></h2>
+                    <div class="info">
+                        Le 15 janvier 2018
+                    </div>
+                    <div class="resume">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean risus tellus, consequat ac
+                        congue in, pharetra sit amet metus. In eget volutpat felis cras amet.
+                    </div>
+                </div>
+            </article>
+            <article class="article_remonter">
+                <a href="#" class="image" style="background: url(/media/testcarousel.jpg)"></a>
+                <div class="content_art">
+                    <h2><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing volutpat.</a></h2>
+                    <div class="info">
+                        Le 15 janvier 2018
+                    </div>
+                    <div class="resume">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean risus tellus, consequat ac
+                        congue in, pharetra sit amet metus. In eget volutpat felis cras amet.
+                    </div>
                 </div>
             </article>
 
@@ -31,7 +73,8 @@ $display->Navigation();
     </div>
 
 
-
 </div>
+
+<?php $display->Footer() ?>
 
 </body>
