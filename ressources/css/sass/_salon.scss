@@ -1,0 +1,136 @@
+.salon {
+  flex: 3;
+  max-width: 75%;
+  padding: 0 35px 0 0;
+
+  @media screen and (max-width: 980px) {
+    max-width:100%;
+    padding:0;
+  }
+
+  .carouselsalon {
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    
+    @media screen and (max-width: 625px) {
+      height:inherit;
+    }
+
+    .owl-nav {
+      position: absolute;
+      top: 0;
+      width: 100%;
+
+      .owl-prev {
+        float: left;
+        padding: 10px;
+        background: RGBa(255, 255, 255, 0.7);
+
+        &:hover {
+          background: RGBa(255, 255, 255, 0.9);
+        }
+      }
+      .owl-next {
+        float: right;
+        padding: 10px;
+        background: RGBa(255, 255, 255, 0.7);
+        margin-right: -1px;
+        &:hover {
+          background: RGBa(255, 255, 255, 0.9);
+        }
+      }
+    }
+  }
+  .description,.eco-coiffeur {
+    padding: 45px;
+    background: white;
+    margin-right: -1px;
+    font-size: 15px;
+    line-height: 28px;
+    text-align: justify;
+
+    @media screen and (max-width:400px) {
+      line-height: 20px;
+      font-size: 0.8em;
+
+      ul {
+        padding: 0 20px;
+      }
+    }
+
+    h2{
+      text-align: center;
+      margin:0 0 20px 0;
+    }
+  }
+  .eco-coiffeur {
+    margin:20px 0 ;
+    position: relative;
+
+    #left {
+      width:70px;
+      position: absolute;
+      top: 20px;
+      @media screen and (max-width:460px) {
+        position: relative;
+        display: block;
+        margin: 0 auto 40px;
+      }
+    }
+    #right {
+      width:70px;
+      position: absolute;
+      top: 20px;
+      right: 45px;
+
+      @media screen and (max-width:460px) {
+        display: none;
+      }
+    }
+    #perf {
+      margin: 20px auto;
+      display: block;
+    }
+  }
+
+  #equipe_title {
+    padding: 20px;
+    background: white;
+    text-align: center;
+  }
+
+  .equipe {
+    margin: 20px 0;
+    background: white;
+    display: flex;
+    align-items: center;
+
+    @media screen and (max-width:600px) {
+      flex-direction: column;
+    }
+
+    p {
+      padding: 30px;
+      flex:4;
+      @media screen and (max-width:767px) {
+        flex:2;
+      }
+      @media screen and (max-width:600px) {
+        order:2;
+      }
+    }
+    .photo_equipe {
+      flex: 2;
+      height: 250px;
+      background-size: cover;
+      background-position: center;
+
+      @media screen and (max-width:600px) {
+        min-height: 250px;
+        order:1;
+        width:100%;
+      }
+    }
+  }
+}
