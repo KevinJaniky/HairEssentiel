@@ -24,10 +24,11 @@ $count = count($blog);
 
                 <?php
                     for($i=0;$i<$count;$i++) {
+                        $url = str_replace(' ','-',$blog[$i]['titre']);
                         ?>
                         <li>
-                            <a href="#" class="image" style="background: url(<?= $blog[$i]['couverture'] ?>)"></a>
-                            <h2 class="name"><a href="#"><?= $blog[$i]['titre'] ?></a></h2>
+                            <a href="/Article/<?= $blog[$i]['id'] ?>/<?=$url ?>" class="image" style="background: url(<?= $blog[$i]['couverture'] ?>)"></a>
+                            <h2 class="name"><a href="/Article/<?= $blog[$i]['id'] ?>/<?=$url ?>"><?= $blog[$i]['titre'] ?></a></h2>
                             <span><?php echo date('d M Y',strtotime($blog[$i]['date'])); ?></span>
                             <p><?= strip_tags(substr($blog[$i]['content'],0,255)) ?></p>
                         </li>

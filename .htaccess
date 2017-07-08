@@ -5,3 +5,4 @@ RewriteRule ^Accueil$ index.php
 RewriteRule ^Contact$ contact.php
 RewriteRule ^Salon$ salon.php
 RewriteRule ^Blog$ blog.php
+RewriteRule ^Article/([0-9]+)/(.+)$ article.php?id=$1

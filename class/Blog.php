@@ -25,4 +25,11 @@ class Blog {
 
     }
 
+    public function selectId($id) {
+        $query = $this->_bdd->prepare('SELECT * FROM blog WHERE id = :id');
+        $query->execute([
+            'id'=>$id
+        ]);
+        return $query->fetch();
+    }
 }

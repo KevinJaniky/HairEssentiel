@@ -1,0 +1,30 @@
+.preview {
+  flex: 3;
+  min-width: 75%;
+  background: white;
+  margin-right:30px;
+  padding: 20px 0;
+
+  @media screen and (max-width: 980px) {
+    margin-bottom: 30px;
+    margin-right:0;
+  }
+
+  h1 {
+    text-align: center;
+  }
+  span {
+    display: block;
+    padding: 10px;
+    float: right;
+  }
+  >img {
+    width:100%;
+    height:auto;
+  }
+  .content {
+    padding: 30px;
+    line-height: 30px;
+  }
+  
+}
