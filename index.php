@@ -16,7 +16,7 @@ $display->Navigation();
 
         <div class="homepage">
             <article class="article_remonter">
-                <a href="#" class="image" style="background: url(/media/testcarousel.jpg)"></a>
+                <a href="#" class="image" style="background: url'/version2/media/testcarousel.jpg)"></a>
                 <div class="content_art">
                     <h2><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing volutpat.</a></h2>
                     <div class="info">

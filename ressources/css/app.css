@@ -18,7 +18,7 @@ body {
 header {
   text-align: center;
   padding: 35px;
-  background: url(/media/header.jpg);
+  background: url(/version2/media/header.jpg);
   max-height: 300px;
   background-size: cover;
   background-position: center; }
@@ -283,3 +283,30 @@ footer {
   footer .copyright_element {
     color: #545454;
     text-align: center; }
+
+.contact {
+  display: flex;
+  margin: 20px 0; }
+  @media screen and (max-width: 650px) {
+    .contact {
+      flex-direction: column; } }
+  .contact > div {
+    flex: 1; }
+  .contact .form_contact input {
+    border-radius: 0; }
+  .contact .adresse > div {
+    font-size: 18px; }
+    .contact .adresse > div i {
+      margin-right: 10px; }
+    .contact .adresse > div img {
+      margin: 20px 0;
+      width: 70%; }
+      @media screen and (max-width: 650px) {
+        .contact .adresse > div img {
+          margin: 0;
+          width: 100%; } }
+
+.map {
+  margin: 20px auto; }
+  .map iframe {
+    width: 100% !important; }

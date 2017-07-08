@@ -1,0 +1,42 @@
+.contact {
+  display: flex;
+  margin: 20px 0;
+
+  @media screen and (max-width: 650px) {
+    flex-direction: column;
+  }
+  >div {
+    flex:1;
+  }
+
+  .form_contact {
+    input {
+      border-radius: 0;
+    }
+  }
+
+  .adresse {
+    >div {
+      font-size: 18px;
+      i{
+        margin-right: 10px;
+      }
+      img {
+        margin: 20px 0;
+        width:70%;
+
+        @media screen and (max-width: 650px) {
+         margin: 0;
+          width:100%;
+        }
+      }
+    }
+  }
+}
+
+.map {
+  margin:20px auto;
+  iframe {
+    width: 100% !important;
+  }
+}

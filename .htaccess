@@ -2,3 +2,4 @@ Options +FollowSymlinks
 RewriteEngine On
 
 RewriteRule ^Accueil$ index.php
+RewriteRule ^Contact$ contact.php
