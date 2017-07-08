@@ -22,6 +22,7 @@ class Display {
                 <script src=\"/ressources/bootstrap/js/jquery.js\"></script>
                 <script src=\"/ressources/bootstrap/js/bootstrap.min.js\"></script>
                 <script src=\"/ressources/owl-carousel/owl.carousel.min.js\"></script>
+                <script src=\"//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js\"></script>
                 <script src=\"/ressources/js/script.js\"></script>
             </head>";
     }
@@ -81,6 +82,10 @@ class Display {
     }
 
     public function Aside() {
+
+        $proverbe = new Proverbe();
+        $data = $proverbe->contentProverbe();
+
         echo '
         
 <aside>
@@ -96,7 +101,8 @@ class Display {
        <li><a href="#" target="_blank"><i class="fa fa-youtube"></i></a></li>
     </ul>
     <p class="proverbe">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque aliquam ac sapien ac faucibus amet.
+        '.$data['content'].'
+        <span>- '.$data['auteur'].'</span>
     </p>
     <!--<div>
         <div class="activité"> Bloc 1</div>

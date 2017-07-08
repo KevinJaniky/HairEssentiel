@@ -11,9 +11,7 @@ $display->Navigation();
 ?>
 <div class="container">
     <?php $display->Carousel() ?>
-
     <div class="main">
-
         <div class="homepage">
             <article class="article_remonter">
                 <a href="#" class="image" style="background: url(/media/testcarousel.jpg)"></a>

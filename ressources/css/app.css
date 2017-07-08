@@ -143,6 +143,8 @@ header {
         right: 21px;
         font-size: 30px;
         color: #585858; }
+      .main aside .proverbe span {
+        color: #a5a5a5; }
   .main .homepage {
     margin-right: 30px;
     flex: 3;
@@ -413,3 +415,65 @@ footer {
           min-height: 250px;
           order: 1;
           width: 100%; } }
+
+.blog {
+  flex: 3;
+  min-width: 75%;
+  margin-right: 30px; }
+  .blog .search_box {
+    position: relative;
+    width: 100%;
+    text-align: right; }
+    .blog .search_box label {
+      padding: 5px;
+      position: absolute; }
+      .blog .search_box label i {
+        font-size: 20px;
+        background: #71b744;
+        padding: 7px;
+        top: 0;
+        position: absolute;
+        left: -30px;
+        color: white; }
+    .blog .search_box input {
+      padding: 5px; }
+      .blog .search_box input:focus {
+        outline: none; }
+  .blog .list {
+    margin-top: 5px;
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap; }
+    .blog .list li {
+      flex: 1;
+      min-width: 46%;
+      max-width: 49%;
+      margin-left: 20px;
+      margin-top: 20px;
+      background: white;
+      padding: 20px; }
+      .blog .list li > a {
+        height: 250px;
+        width: 100%;
+        display: block;
+        background-size: cover !important;
+        background-position: center !important; }
+      .blog .list li h2 {
+        padding: 0 1px; }
+        .blog .list li h2 a {
+          color: black;
+          font-size: 21px;
+          text-decoration: none; }
+      .blog .list li span {
+        color: #9c9c9c; }
+      .blog .list li p {
+        line-height: 26px;
+        margin-top: 6px; }
+  .blog .page {
+    text-align: center; }
+    .blog .page .pagination li a {
+      color: #8db762; }
+    .blog .page .pagination li.active a {
+      color: white;
+      background: #8db762;
+      border: #71b744; }

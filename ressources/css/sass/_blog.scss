@@ -1,0 +1,93 @@
+.blog {
+  flex: 3;
+  min-width: 75%;
+  margin-right: 30px;
+
+  .search_box {
+    position: relative;
+    width: 100%;
+    text-align: right;
+
+    label {
+      padding: 5px;
+      position: absolute;
+
+      i {
+        font-size: 20px;
+        background: $greenhover;
+        padding: 7px;
+        top: 0;
+        position: absolute;
+        left: -30px;
+        color: white;
+      }
+    }
+    input {
+      padding: 5px;
+      &:focus {
+        outline: none;
+
+      }
+    }
+  }
+
+  .list {
+    margin-top: 5px;
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+
+    li {
+      flex: 1;
+      min-width: 46%;
+      max-width: 49%;
+      margin-left: 20px;
+      margin-top: 20px;
+      background: white;
+      padding: 20px;
+
+     >a {
+        height: 250px;
+        width: 100%;
+        display: block;
+        background-size: cover !important;
+        background-position: center !important;
+      }
+
+      h2 {
+        padding: 0 1px;
+        a{
+          color: black;
+          font-size: 21px;
+          text-decoration: none;
+        }
+      }
+      span {
+        color: #9c9c9c;
+      }
+      p{
+        line-height: 26px;
+        margin-top: 6px;
+      }
+    }
+  }
+  .page {
+    text-align: center;
+    .pagination {
+      li {
+
+        a {
+          color: $green;
+        }
+
+        &.active {
+          a {
+            color: white;
+            background: $green;
+            border: $greenhover;
+          }
+        }
+      }
+    }
+  }
+}
