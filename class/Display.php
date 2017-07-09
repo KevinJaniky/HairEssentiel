@@ -3,33 +3,34 @@ class Display {
     public function __construct($titre)
     {
 
-        echo "<head>
+        echo "*
+    <head>
                 <title>$titre | Yuna Création</title>
             
                 <meta charset=\"utf-8\">
-                <meta name=\"description\" content=\"\">
+                <meta name=\"description\" content=\"Site de coiffure à Louhans - Hair essentiel salon du végétal \">
                 <meta property=\"og:title\" content=\"$titre\"/>
-                <meta http-equiv=\"pragma\" content=\"no-cache\" />
-                <meta property=\"og:description\" content=\"Description\"/>
-                <meta property=\"og:image\" content=\"URL_image\"/>
-                <meta property=\"og:url\" content=\"\">
-                <link rel='icon' href='/media/favicon.png'>
-                <link rel=\"stylesheet\" href=\"/ressources/bootstrap/css/bootstrap.min.css\">
-                <link rel=\"stylesheet\" href=\"/ressources/owl-carousel/assets/owl.carousel.min.css\">
+                <meta property=\"og:description\" content=\"Site de coiffure à Louhans - Hair essentiel salon du végétal \"/>
+                <meta property=\"og:image\" content=\"/hair/media/favicon.png\"/>
+                <meta property=\"og:url\" content=\"www.hair-essentiel.fr\">
+                <link rel='icon' href='/hair/media/favicon.png'>
+                <link rel=\"stylesheet\" href=\"/hair/ressources/bootstrap/css/bootstrap.min.css\">
+                <link rel=\"stylesheet\" href=\"/hair/ressources/owl-carousel/assets/owl.carousel.min.css\">
                 <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
-                <link rel=\"stylesheet\" href=\"/ressources/css/app.css\">
+                <link href=\"https://fonts.googleapis.com/css?family=Capriola|Pacifico\" rel=\"stylesheet\">
+                <link rel=\"stylesheet\" href=\"/hair/ressources/css/app.css\">
             
-                <script src=\"/ressources/bootstrap/js/jquery.js\"></script>
-                <script src=\"/ressources/bootstrap/js/bootstrap.min.js\"></script>
-                <script src=\"/ressources/owl-carousel/owl.carousel.min.js\"></script>
+                <script src=\"/hair/ressources/bootstrap/js/jquery.js\"></script>
+                <script src=\"/hair/ressources/bootstrap/js/bootstrap.min.js\"></script>
+                <script src=\"/hair/ressources/owl-carousel/owl.carousel.min.js\"></script>
                 <script src=\"//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js\"></script>
-                <script src=\"/ressources/js/script.js\"></script>
+                <script src=\"/hair/ressources/js/script.js\"></script>
             </head>";
     }
     public function Header() {
         echo '
         <header>
-            <img src="/media/favicon.png" alt="Logo Hair Essentiel">
+            <img src="/hair/media/favicon.png" alt="Logo Hair Essentiel">
         </header>
         ';
     }
@@ -55,11 +56,11 @@ class Display {
             </ul>
 
             <ul class="nav navbar-nav " id="nav-princ">
-                <li><a href="/Accueil">Accueil</a></li>
-                <li><a href="/Salon">Salon</a></li>
-                <li><a href="/Offres">Offres</a></li>
-                <li><a href="/Blog">Blog</a></li>
-                <li><a href="/Contact" rel="nofollow">Contact</a></li>
+                <li><a href="/hair/Accueil">Accueil</a></li>
+                <li><a href="/hair/Salon">Salon</a></li>
+                <li><a href="/hair/Offres">Offres</a></li>
+                <li><a href="/hair/Blog">Blog</a></li>
+                <li><a href="/hair/Contact" rel="nofollow">Contact</a></li>
 
             </ul>
         </div>
@@ -71,11 +72,11 @@ class Display {
     public function Carousel(){
         echo '
         <div class="MyCarousel">
-    <div><img src="/media/testcarousel.jpg" alt="Carousel item Image Louhans Coiffeur"></div>
-    <div><img src="/media/test_carousel2.jpg" alt="Carousel item Image Louhans Coiffeur"></div>
-    <div><img src="/media/testcarousel.jpg" alt="Carousel item Image Louhans Coiffeur"></div>
-    <div><img src="/media/test_carousel2.jpg" alt="Carousel item Image Louhans Coiffeur"></div>
-    <div><img src="/media/testcarousel.jpg" alt="Carousel item Image Louhans Coiffeur"></div>
+    <div><img src="/hair/media/testcarousel.jpg" alt="Carousel item Image Louhans Coiffeur"></div>
+    <div><img src="/hair/media/test_carousel2.jpg" alt="Carousel item Image Louhans Coiffeur"></div>
+    <div><img src="/hair/media/testcarousel.jpg" alt="Carousel item Image Louhans Coiffeur"></div>
+    <div><img src="/hair/media/test_carousel2.jpg" alt="Carousel item Image Louhans Coiffeur"></div>
+    <div><img src="/hair/media/testcarousel.jpg" alt="Carousel item Image Louhans Coiffeur"></div>
 
 </div>
         ';
@@ -116,16 +117,16 @@ class Display {
         
 <footer>
     <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In non dignissim ligula. Proin tempus amet.</h2>
-    <img src="/media/favicon.png" alt="Logo Hait Essentiel">
+    <img src="/hair/media/favicon.png" alt="Logo Hait Essentiel">
     <div class="footer-link">
         <div class="links">
             <ul>
                 <li>Liens Utiles</li>
-                <li><a href="/Salon">A propos de moi</a></li>
-                <li><a href="/Offres">Nos Offres</a></li>
-                <li><a href="/Blog">Mon Blog</a></li>
-                <li><a href="/Blog">Mentions Légales</a></li>
-                <li><a href="/Blog">Contact</a></li>
+                <li><a href="/hair/Salon">A propos de moi</a></li>
+                <li><a href="/hair/Offres">Nos Offres</a></li>
+                <li><a href="/hair/Blog">Mon Blog</a></li>
+                <li><a href="/hair/Mentions-Legales">Mentions Légales</a></li>
+                <li><a href="/hair/Contact">Contact</a></li>
             </ul>
         </div>
         <div class="follow">
@@ -134,13 +135,14 @@ class Display {
                 <li><a href="#">Facebook</a></li>
                 <li><a href="#">Twitter</a></li>
                 <li><a href="#">Youtube</a></li>
+                <li><a href="http://hairessentiel.com/" target="_blank">Chalon-sur-saone</a></li>
             </ul>
         </div>
         <div class="newsletter">
-            <form action="">
+            <form action="traitement_mail.php" method="POST">
                 <div class="form-group">
                     <label for="mail">NewsLetter</label>
-                    <input type="email" id="mail" placeholder="Votre mail" class="form-control">
+                    <input name="mail" type="email" id="mail" placeholder="Votre mail" class="form-control">
                 </div>
                 <input type="submit" class="btn btn-hair" value="S\'abonner">
             </form>

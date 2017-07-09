@@ -15,6 +15,14 @@ body {
     color: white;
     background: #8db762; }
 
+*:not(i) {
+  font-family: 'Capriola', sans-serif !important; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Pacifico', cursive !important; }
+  h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    font-family: 'Pacifico', cursive !important; }
+
 header {
   text-align: center;
   padding: 35px;
@@ -307,6 +315,8 @@ footer {
         .contact .adresse > div img {
           margin: 0;
           width: 100%; } }
+  .contact .adresse table {
+    width: 95%; }
 
 .map {
   margin: 20px auto; }
@@ -516,7 +526,7 @@ footer {
   flex: 3;
   min-width: 75%;
   margin-right: 30px;
-  padding: 20px 0;
+  padding: 50px 0;
   display: flex;
   flex-wrap: wrap;
   margin-top: 101px;
@@ -524,7 +534,7 @@ footer {
   @media screen and (max-width: 500px) {
     .offre {
       margin-right: 0; } }
-  .offre h2 {
+  .offre hgroup {
     position: absolute;
     top: -120px;
     width: 100%;
@@ -579,3 +589,36 @@ footer {
       text-align: center;
       margin-top: 15px;
       line-height: 28px; }
+
+.mention {
+  background: white;
+  padding: 50px;
+  margin: 30px 0; }
+  .mention h2 {
+    margin-bottom: 45px; }
+  .mention h2, .mention h3 {
+    text-align: center; }
+  .mention p {
+    font-size: 16px;
+    width: 80%;
+    margin: auto; }
+  .mention .flex {
+    width: 80%;
+    margin: auto;
+    display: flex; }
+    .mention .flex .coord {
+      flex: 1; }
+      .mention .flex .coord:nth-child(2) {
+        margin-left: 10px;
+        margin-right: 10px; }
+        .mention .flex .coord:nth-child(2) h4 {
+          background: #faad39 !important; }
+      .mention .flex .coord h4 {
+        text-align: center;
+        padding: 15px;
+        background: #71b744;
+        color: white; }
+      .mention .flex .coord p {
+        text-align: center; }
+        .mention .flex .coord p a {
+          text-decoration: none; }

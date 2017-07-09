@@ -1,0 +1,52 @@
+.mention {
+  background: white;
+  padding:50px;
+  margin:30px 0;
+
+  h2{
+    margin-bottom:45px;
+  }
+
+  h2,h3 {
+    text-align:center;
+  }
+
+  p {
+    font-size: 16px;
+    width: 80%;
+    margin: auto;
+  }
+  .flex {
+    width:80%;
+    margin:auto;
+    display: flex;
+    .coord{
+      flex:1;
+
+      &:nth-child(2) {
+        margin-left:10px;
+        margin-right:10px;
+        h4{
+          background: $orangehover !important;
+        }
+      }
+
+      h4 {
+        text-align: center;
+        padding: 15px;
+        background: $greenhover;
+        color: white;
+      }
+
+      p {
+        text-align: center;
+
+        a {
+          text-decoration: none;
+        }
+      }
+    }
+
+  }
+
+}

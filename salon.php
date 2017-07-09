@@ -1,6 +1,6 @@
 <?php
 require_once 'autoload.php';
-$display = new Display('Accueil');
+$display = new Display('Salon');
 ?>
 
 <body>
