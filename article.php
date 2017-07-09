@@ -6,9 +6,7 @@ if (isset($_GET['id'])) {
     $data = new Blog();
     $id = $_GET['id'];
     $article = $data->selectId($id);
-
     $display = new Display($article['titre']);
-
     ?>
 
     <body>

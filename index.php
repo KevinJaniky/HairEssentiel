@@ -8,64 +8,33 @@ $display = new Display('Accueil');
 include 'analytics.php';
 $display->Header();
 $display->Navigation();
+$articles = new Blog();
+
+$data = $articles->selectHome();
+$count = count($data);
 ?>
 <div class="container">
     <?php $display->Carousel() ?>
     <div class="main">
         <div class="homepage">
-            <article class="article_remonter">
-                <a href="#" class="image" style="background: url(/media/testcarousel.jpg)"></a>
-                <div class="content_art">
-                    <h2><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing volutpat.</a></h2>
-                    <div class="info">
-                        Le 15 janvier 2018
+            <?php
+            for ($i = 0; $i < $count; $i++) {
+                ?>
+                <article class="article_remonter">
+                    <a href="#" class="image" style="background: url(<?= $data[$i]['couverture'] ?>)"></a>
+                    <div class="content_art">
+                        <h2><a href="#"><?= $data[$i]['titre'] ?></a></h2>
+                        <div class="info">
+                            <?= $data[$i]['date'] ?>
+                        </div>
+                        <div class="resume">
+                            <?= strip_tags(substr($data[$i]['content'],0,200)); ?>
+                        </div>
                     </div>
-                    <div class="resume">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean risus tellus, consequat ac
-                        congue in, pharetra sit amet metus. In eget volutpat felis cras amet.
-                    </div>
-                </div>
-            </article>
-            <article class="article_remonter">
-                <a href="#" class="image" style="background: url(/media/testcarousel.jpg)"></a>
-                <div class="content_art">
-                    <h2><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing volutpat.</a></h2>
-                    <div class="info">
-                        Le 15 janvier 2018
-                    </div>
-                    <div class="resume">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean risus tellus, consequat ac
-                        congue in, pharetra sit amet metus. In eget volutpat felis cras amet.
-                    </div>
-                </div>
-            </article>
-            <article class="article_remonter">
-                <a href="#" class="image" style="background: url(/media/testcarousel.jpg)"></a>
-                <div class="content_art">
-                    <h2><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing volutpat.</a></h2>
-                    <div class="info">
-                        Le 15 janvier 2018
-                    </div>
-                    <div class="resume">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean risus tellus, consequat ac
-                        congue in, pharetra sit amet metus. In eget volutpat felis cras amet.
-                    </div>
-                </div>
-            </article>
-            <article class="article_remonter">
-                <a href="#" class="image" style="background: url(/media/testcarousel.jpg)"></a>
-                <div class="content_art">
-                    <h2><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing volutpat.</a></h2>
-                    <div class="info">
-                        Le 15 janvier 2018
-                    </div>
-                    <div class="resume">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean risus tellus, consequat ac
-                        congue in, pharetra sit amet metus. In eget volutpat felis cras amet.
-                    </div>
-                </div>
-            </article>
-
+                </article>
+                <?php
+            }
+            ?>
         </div>
         <?php $display->Aside() ?>
     </div>

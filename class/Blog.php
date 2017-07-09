@@ -32,4 +32,9 @@ class Blog {
         ]);
         return $query->fetch();
     }
+
+    public function selectHome(){
+        $query = $this->_bdd->query('SELECT * FROM blog ORDER BY id DESC LIMIT 4');
+        return $query->fetchAll();
+    }
 }

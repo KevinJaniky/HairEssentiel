@@ -1,0 +1,87 @@
+.offre{
+  flex: 3;
+  min-width: 75%;
+  margin-right:30px;
+  padding: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 101px;
+  position: relative;
+
+  @media screen and (max-width: 500px) {
+    margin-right:0;
+  }
+
+
+  h2 {
+    position: absolute;
+    top: -120px;
+    width: 100%;
+    padding: 7px 0;
+    text-align: center;
+    background: white;
+  }
+
+  .price_content {
+    flex: 1;
+    max-width: 23%;
+    margin-right: 20px;
+    max-height: 200px;
+    padding:40px 20px;
+    position: relative;
+    background: white;
+    border: 2px solid $greenhover;
+    min-width: 22%;
+    margin-bottom: 80px;
+    margin-top: 30px;
+
+    @media screen and (max-width: 769px) {
+      min-width: 45%;
+      max-width:48%;
+    }
+    @media screen and (max-width: 500px) {
+      min-width: 100%;
+      max-width:100%;
+      margin-bottom:35px;
+    }
+
+    span {
+      font-size: 9px;
+      position: absolute;
+      top: -17px;
+      left: 14px;
+    }
+
+    &:nth-child(2n+2) {
+      border: 2px solid $orangehover;
+
+      .price {
+          background:$orangehover !important;
+
+      }
+    }
+
+
+    .price {
+      position: absolute;
+      top: -40px;
+      background: $greenhover;
+      border-radius: 50%;
+      width: 75px;
+      height: 75px;
+      text-align: center;
+      left: 50%;
+      transform: translateX(-50%);
+      line-height:78px;
+      font-size: 20px;
+      color: white;
+      font-weight: bold;
+
+    }
+    .description {
+      text-align: center;
+      margin-top: 15px;
+      line-height: 28px;
+    }
+  }
+}

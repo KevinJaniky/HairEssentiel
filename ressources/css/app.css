@@ -122,7 +122,7 @@ header {
           color: black; }
     .main aside .proverbe {
       margin: 20px 0;
-      padding: 40px;
+      padding: 40px 56px;
       background: white;
       position: relative;
       text-align: justify; }
@@ -511,3 +511,71 @@ footer {
   .preview .content {
     padding: 30px;
     line-height: 30px; }
+
+.offre {
+  flex: 3;
+  min-width: 75%;
+  margin-right: 30px;
+  padding: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 101px;
+  position: relative; }
+  @media screen and (max-width: 500px) {
+    .offre {
+      margin-right: 0; } }
+  .offre h2 {
+    position: absolute;
+    top: -120px;
+    width: 100%;
+    padding: 7px 0;
+    text-align: center;
+    background: white; }
+  .offre .price_content {
+    flex: 1;
+    max-width: 23%;
+    margin-right: 20px;
+    max-height: 200px;
+    padding: 40px 20px;
+    position: relative;
+    background: white;
+    border: 2px solid #71b744;
+    min-width: 22%;
+    margin-bottom: 80px;
+    margin-top: 30px; }
+    @media screen and (max-width: 769px) {
+      .offre .price_content {
+        min-width: 45%;
+        max-width: 48%; } }
+    @media screen and (max-width: 500px) {
+      .offre .price_content {
+        min-width: 100%;
+        max-width: 100%;
+        margin-bottom: 35px; } }
+    .offre .price_content span {
+      font-size: 9px;
+      position: absolute;
+      top: -17px;
+      left: 14px; }
+    .offre .price_content:nth-child(2n+2) {
+      border: 2px solid #faad39; }
+      .offre .price_content:nth-child(2n+2) .price {
+        background: #faad39 !important; }
+    .offre .price_content .price {
+      position: absolute;
+      top: -40px;
+      background: #71b744;
+      border-radius: 50%;
+      width: 75px;
+      height: 75px;
+      text-align: center;
+      left: 50%;
+      transform: translateX(-50%);
+      line-height: 78px;
+      font-size: 20px;
+      color: white;
+      font-weight: bold; }
+    .offre .price_content .description {
+      text-align: center;
+      margin-top: 15px;
+      line-height: 28px; }
