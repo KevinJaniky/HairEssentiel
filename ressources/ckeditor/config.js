@@ -18,15 +18,10 @@ CKEDITOR.editorConfig = function( config ) {
 
     config.toolbar = [
         { name : 'basicstyles' , items : ['Bold','Italic','Strike','-','RemoveFormat']},
-        { name : 'clipboard' , items : ['Cut','Copy','Paste','-','Undo','Redo']},
         { name : 'paragraph' , items : ['BulletedList','Outdent','Indent','-','Blockquote','Justifyleft','Justifycenter','Justifyright']},
         { name : 'styles' , items : ['Styles','Format','FontSize','TextColor']},
         { name : 'tools' , items : ['Maximize']},
-        '/',
-        { name : 'links' , items : ['Link','Unlink','Anchor']},
         { name : 'insert' , items : ['Image','Iframe','-','Table','Accordionlist','Smiley']},
-        { name : 'editing' , items : ['Scayt','Autocorrect','SelectAll','Find','Replace']},
-
     ]
 };
 

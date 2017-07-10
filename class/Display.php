@@ -3,9 +3,9 @@ class Display {
     public function __construct($titre)
     {
 
-        echo "*
+        echo "
     <head>
-                <title>$titre | Yuna Création</title>
+                <title>$titre | Hair Essentiel</title>
             
                 <meta charset=\"utf-8\">
                 <meta name=\"description\" content=\"Site de coiffure à Louhans - Hair essentiel salon du végétal \">
@@ -124,9 +124,9 @@ class Display {
                 <li>Liens Utiles</li>
                 <li><a href="/hair/Salon">A propos de moi</a></li>
                 <li><a href="/hair/Offres">Nos Offres</a></li>
-                <li><a href="/hair/Blog">Mon Blog</a></li>
-                <li><a href="/hair/Mentions-Legales">Mentions Légales</a></li>
-                <li><a href="/hair/Contact">Contact</a></li>
+                <li><a href="/Blog">Mon Blog</a></li>
+                <li><a href="/Mentions-Legales">Mentions Légales</a></li>
+                <li><a href="/Contact">Contact</a></li>
             </ul>
         </div>
         <div class="follow">

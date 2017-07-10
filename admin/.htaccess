@@ -1,0 +1,10 @@
+Options +FollowSymlinks
+RewriteEngine On
+
+RewriteRule ^Connexion$ index.php
+RewriteRule ^Dashboard$ dashboard.php
+RewriteRule ^Add$ add_article.php
+RewriteRule ^Equipe$ team.php
+RewriteRule ^Add-Equipe$ add_team.php
+RewriteRule ^Proverbe$ proverbe.php
+RewriteRule ^Article/([0-9]+)$ article.php?id=$1
