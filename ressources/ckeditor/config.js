@@ -4,12 +4,12 @@
  */
 
 CKEDITOR.editorConfig = function( config ) {
-    config.filebrowserBrowseUrl = '../kcfinder/browse.php?opener=ckeditor&type=files';
-    config.filebrowserImageBrowseUrl = '../kcfinder/browse.php?opener=ckeditor&type=images';
-    config.filebrowserFlashBrowseUrl = '../kcfinder/browse.php?opener=ckeditor&type=flash';
-    config.filebrowserUploadUrl = '../kcfinder/upload.php?opener=ckeditor&type=files';
-    config.filebrowserImageUploadUrl = '../kcfinder/upload.php?opener=ckeditor&type=images';
-    config.filebrowserFlashUploadUrl = '../kcfinder/upload.php?opener=ckeditor&type=flash';
+    config.filebrowserBrowseUrl = '/ressources/kcfinder/browse.php?opener=ckeditor&type=files';
+    config.filebrowserImageBrowseUrl = '/ressources/kcfinder/browse.php?opener=ckeditor&type=images';
+    config.filebrowserFlashBrowseUrl = '/ressources/kcfinder/browse.php?opener=ckeditor&type=flash';
+    config.filebrowserUploadUrl = '/ressources/kcfinder/upload.php?opener=ckeditor&type=files';
+    config.filebrowserImageUploadUrl = '/ressources/kcfinder/upload.php?opener=ckeditor&type=images';
+    config.filebrowserFlashUploadUrl = '/ressources/kcfinder/upload.php?opener=ckeditor&type=flash';
 
 
 	/// / Define changes to default configuration here. For example:

@@ -3,7 +3,7 @@ require_once 'autoload.php';
 $display = new Display('Offre');
 ?>
 
-<body>
+<body id="offre-flex">
 <?php
 include 'analytics.php';
 $display->Header();

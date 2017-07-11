@@ -36,7 +36,7 @@ if (isset($_SESSION['admin']) && $_SESSION['admin'] == true) {
                         <td><?= $offre[$i]['id'] ?></td>
                         <td><img style="width: 100px" src="<?php echo $offre[$i]['photo'] ?>"></td>
                         <td><?= $offre[$i]['identite'] ?></td>
-                        <td><?= $offre[$i]['content'] ?></td>
+                        <td><?= strip_tags($offre[$i]['content']) ?></td>
                         <td><a href="/admin/Modify-Equipe/<?=$offre[$i]['id']?>"><i class="material-icons blue-text text-darken-4">edit</i></a></td>
                         <td><a href="#" data-id="<?=$offre[$i]['id']?>" class="delete"><i class="material-icons red-text text-darken-2">delete</i></a></td>
                     </tr>

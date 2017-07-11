@@ -27,7 +27,7 @@ header {
   text-align: center;
   padding: 35px;
   background: url(/version2/media/header.jpg);
-  max-height: 300px;
+  height: 300px;
   background-size: cover;
   background-position: center; }
   header img {
@@ -521,6 +521,9 @@ footer {
   .preview .content {
     padding: 30px;
     line-height: 30px; }
+
+#offre-flex aside {
+  flex: inherit; }
 
 .offre {
   flex: 3;

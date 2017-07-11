@@ -3,7 +3,7 @@ class Display {
     public function __construct($titre)
     {
 
-        echo "
+        echo "<!DOCTYPE html><html lang='fr'>
     <head>
                 <title>$titre | Hair Essentiel</title>
             
@@ -152,6 +152,8 @@ class Display {
         Copyright &copy; 2017 . Developed by Yuna Création
     </div>
 </footer>
+</body>
+</html>
         ';
 
     }

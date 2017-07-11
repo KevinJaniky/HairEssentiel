@@ -75,20 +75,39 @@ $display->Navigation();
                 <h2>L'équipe</h2>
                 <h5>Un lieu de détente juste pour vous, prendre un temps pour soi et sortir la tête légère</h5>
             </div>
-            <div class="equipe">
-                <p>
-                    Carole, met tout en œuvre pour mettre vos cheveux en valeur, vous conseiller et vous apporter du
-                    bien-être. La création de son concept « être coiffeuse pour faire du bien au gens » est toute sa
-                    vie.
-                </p>
-                <div style="background-image: url(/media/equipe/carole.png)" class="photo_equipe"></div>
-            </div>
-            <div class="equipe">
-                <div  style="background-image: url(/media/equipe/Marjorie.jpg)" class="photo_equipe"></div>
-                <p>
-                    Marjorie, discrète et attentive, s’occupera de vous avec douceur, ses massages du cuir chevelu sont sensationnels. Le végétal est sa vraie passion après la coiffure.
-                </p>
-            </div>
+            <?php
+            $user = new Team();
+            $team = $user->select();
+            $count = count($team);
+
+            for ($i = 0; $i < $count; $i++) {
+                if ($i % 2 == 0) {
+                    ?>
+                    <div class="equipe">
+                        <p>
+                            <?= $team[$i]['content'] ?>
+                        </p>
+                        <div style="background-image: url(<?= $team[$i]['photo'] ?>)" class="photo_equipe"></div>
+                    </div>
+                    <?php
+                } else {
+
+                    ?>
+                    <div class="equipe">
+                        <div style="background-image: url(<?= $team[$i]['photo'] ?>)" class="photo_equipe"></div>
+                        <p>
+                            <?= $team[$i]['content'] ?>
+                        </p>
+                    </div>
+                    <?php
+                }
+
+
+            }
+
+            ?>
+
+
         </div>
         <?php $display->Aside() ?>
     </div>
