@@ -16,3 +16,5 @@ RewriteRule ^Add-Offre$ add_offre.php
 RewriteRule ^Modify-Equipe/([0-9]+)$ mod_equipe.php?id=$1
 RewriteRule ^Horaire$ horaire.php
 RewriteRule ^Modify-Horaire/([0-9]+)$ mod_horaire.php?id=$1
+RewriteRule ^Newsletter$ news.php
+

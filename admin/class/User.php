@@ -35,7 +35,7 @@ class User {
 
     public function verifUser() {
         $query = $this->_bdd->prepare('SELECT * FROM user WHERE identifiant = :id AND mdp = :mdp');
-        $query->execute(['id'=>$this->_id,'mdp'=>$this->_mdp]);
+        $query->execute(['id'=>$this->_id,'mdp'=>md5($this->_mdp)]);
         $data = $query->fetch();
 
         if(empty($data)){

@@ -19,9 +19,11 @@ $count = count($data);
         <div class="homepage">
             <?php
             for ($i = 0; $i < $count; $i++) {
+
+                $url  = str_replace(' ','-', $data[$i]['titre']);
                 ?>
                 <article class="article_remonter">
-                    <a href="#" class="image" style="background: url(<?= $data[$i]['couverture'] ?>)"></a>
+                    <a href="/Article/<?= $data[$i]['id'] ?>/<?= $url ?>" class="image" style="background: url(<?= $data[$i]['couverture'] ?>)"></a>
                     <div class="content_art">
                         <h2><a href="#"><?= $data[$i]['titre'] ?></a></h2>
                         <div class="info">
