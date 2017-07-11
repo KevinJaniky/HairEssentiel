@@ -87,6 +87,11 @@ class Display
             </div>
           </li>
         </ul>
+         <ul class=\"collapsible collapsible-accordion\">
+          <li>
+            <a class=\"collapsible-header\" href='/admin/Horaire'>Horaire<i class=\"material-icons\">access_time</i></a>
+          </li>
+        </ul>
   </ul>
         ";
     }
