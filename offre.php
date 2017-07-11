@@ -28,7 +28,7 @@ $count = count($price);
                 <div class="price_content">
                     <div class="price">
                         <?php
-                        if ($price[$i]['to'] == 1)
+                        if ($price[$i]['partir'] == 1)
                             echo '<span>à partir de</span>';
 
                         echo $price[$i]['prix'] . ' €';

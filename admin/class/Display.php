@@ -71,6 +71,18 @@ class Display
             <div class=\"collapsible-body\">
               <ul>
                 <li><a href=\"/admin/Proverbe\">Général</a></li>
+                <li><a href=\"/admin/Add-Proverbe\">Ajouter</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+         <ul class=\"collapsible collapsible-accordion\">
+          <li>
+            <a class=\"collapsible-header\">Offres<i class=\"material-icons\">euro_symbol</i></a>
+            <div class=\"collapsible-body\">
+              <ul>
+                <li><a href=\"/admin/Offre\">Général</a></li>
+                <li><a href=\"/admin/Add-Offre\">Ajouter</a></li>
               </ul>
             </div>
           </li>

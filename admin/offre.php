@@ -1,3 +1,4 @@
+
 <?php
 
 require 'autoload.php';
@@ -6,9 +7,9 @@ if (isset($_SESSION['admin']) && $_SESSION['admin'] == true) {
     $display->navTop();
     $display->sideBar();
 
-    $proverbes = new Proverbe();
-    $proverbe = $proverbes->select();
-    $count = count($proverbe);
+    $offres = new Offre();
+    $offre = $offres->select();
+    $count = count($offre);
 
     ?>
     <body class="grey lighten-2">
@@ -20,8 +21,9 @@ if (isset($_SESSION['admin']) && $_SESSION['admin'] == true) {
                 <thead>
                 <tr>
                     <th>#</th>
+                    <th>Prix</th>
                     <th>Content</th>
-                    <th>Auteur</th>
+                    <th>A partir de </th>
                     <th></th>
                     <th></th>
                 </tr>
@@ -31,11 +33,12 @@ if (isset($_SESSION['admin']) && $_SESSION['admin'] == true) {
                 for ($i = 0; $i < $count; $i++) {
                     ?>
                     <tr>
-                        <td><?= $proverbe[$i]['id'] ?></td>
-                        <td><?= $proverbe[$i]['content'] ?></td>
-                        <td><?= $proverbe[$i]['auteur'] ?></td>
-                        <td><a href="/admin/Modify-Proverbe/<?=$proverbe[$i]['id']?>"><i class="material-icons blue-text text-darken-4">edit</i></a></td>
-                        <td><a href="#" data-id="<?=$proverbe[$i]['id']?>" class="delete"><i class="material-icons red-text text-darken-2">delete</i></a></td>
+                        <td><?= $offre[$i]['id'] ?></td>
+                        <td><?= $offre[$i]['prix'] ?></td>
+                        <td><?= $offre[$i]['content'] ?></td>
+                        <td><?= $offre[$i]['partir'] ?></td>
+                        <td><a href="/admin/Modify-Offre/<?=$offre[$i]['id']?>"><i class="material-icons blue-text text-darken-4">edit</i></a></td>
+                        <td><a href="#" data-id="<?=$offre[$i]['id']?>" class="delete"><i class="material-icons red-text text-darken-2">delete</i></a></td>
                     </tr>
                     <?php
                 }
@@ -70,7 +73,7 @@ if (isset($_SESSION['admin']) && $_SESSION['admin'] == true) {
                 function (isConfirm) {
                     if (isConfirm) {
 
-                        $.post("delete_article.php",
+                        $.post("delete_offre.php",
                             {id: id},
                             function (data) {
                                 element.remove();

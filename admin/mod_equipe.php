@@ -2,10 +2,12 @@
 
 require 'autoload.php';
 $display = new Display('Dashboard');
-if(isset($_SESSION['admin']) && $_SESSION['admin'] == true) {
+if(isset($_SESSION['admin']) && $_SESSION['admin'] == true && isset($_GET['id'])) {
     $display->navTop();
     $display->sideBar();
-    $data  = new Blog();
+    $data  = new Team();
+    $id = $_GET['id'];
+    $art = $data->selectId($id);
     ?>
     <body class="grey lighten-2">
     <script src="/ressources/ckeditor/ckeditor.js"></script>
@@ -19,8 +21,8 @@ if(isset($_SESSION['admin']) && $_SESSION['admin'] == true) {
                         <form class="col s12" method="post" enctype="multipart/form-data">
                             <div class="row">
                                 <div class="input-field col s12">
-                                    <input id="titre" type="text" name="titre" required>
-                                    <label for="titre">Titre</label>
+                                    <input id="titre" type="text" name="titre" required value="<?= $art['identite'] ?>">
+                                    <label for="titre">Identité</label>
                                 </div>
                             </div>
                             <div class="row">
@@ -37,7 +39,7 @@ if(isset($_SESSION['admin']) && $_SESSION['admin'] == true) {
                             <div class="row">
                                 <label for="content">Content</label>
                                 <textarea name="content" id="content editor" cols="30" rows="10"
-                                          class="ckeditor"></textarea>
+                                          class="ckeditor"><?= $art['content'] ?></textarea>
                             </div>
                             <div class="input-field col s12">                                &nbsp;
                                 <button class="btn cyan waves-effect waves-light right" type="submit"
@@ -48,17 +50,24 @@ if(isset($_SESSION['admin']) && $_SESSION['admin'] == true) {
                         </form>
 
                         <?php
-                        if (isset($_POST['titre']) && isset($_POST['content']) && isset($_FILES['couverture'])) {
+                        if (isset($_POST['titre']) && isset($_POST['content'])) {
                             $titre = $_POST['titre'];
                             $content = $_POST['content'];
                             $image = $_FILES['couverture'];
-                            $data->setCouverture($image);
-                            $data->setTitre($titre);
+
+                            if (!empty($_FILES['couverture']['name'])) {
+                                $image = $_FILES['couverture'];
+                                $data->setCouverture($image);
+                                $data->updateCouverture($id);
+                            }
+
+                            $data->setIdentite($titre);
                             $data->setContent($content);
-                            var_dump($data->add());
+                            $data->update($id);
+
                             ?>
                             <script>
-                               window.location = '/admin/Dashboard';
+                                window.location = '/admin/Equipe';
                             </script>
                             <?php
                         }
@@ -68,9 +77,6 @@ if(isset($_SESSION['admin']) && $_SESSION['admin'] == true) {
             </div>
         </div>
     </div>
-
-
-
     <script>
         $(".button-collapse").sideNav();
     </script>

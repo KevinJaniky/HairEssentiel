@@ -2,10 +2,10 @@
 
 require 'autoload.php';
 $display = new Display('Dashboard');
-if(isset($_SESSION['admin']) && $_SESSION['admin'] == true) {
+if(isset($_SESSION['admin']) && $_SESSION['admin'] == true ) {
     $display->navTop();
     $display->sideBar();
-    $data  = new Blog();
+    $data  = new Offre();
     ?>
     <body class="grey lighten-2">
     <script src="/ressources/ckeditor/ckeditor.js"></script>
@@ -14,30 +14,28 @@ if(isset($_SESSION['admin']) && $_SESSION['admin'] == true) {
         <div class="row">
             <div class="col s12 m12 l10 offset-l1">
                 <div class="card-panel">
-                    <h4 class="header2">Ajouter</h4>
+                    <h4 class="header2">Modification Proverbe</h4>
                     <div class="row">
-                        <form class="col s12" method="post" enctype="multipart/form-data">
+                        <form class="col s12" method="post">
                             <div class="row">
                                 <div class="input-field col s12">
-                                    <input id="titre" type="text" name="titre" required>
-                                    <label for="titre">Titre</label>
+                                    <input id="prix" type="number" name="prix">
+                                    <label for="prix">Prix</label>
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="file-field input-field">
-                                    <div class="btn cyan lighten-1">
-                                        <span>File</span>
-                                        <input type="file" name="couverture">
-                                    </div>
-                                    <div class="file-path-wrapper">
-                                        <input class="file-path validate" type="text">
-                                    </div>
+                                <div class="input-field col s12">
+                                    <input id="content" type="text" name="content" required >
+                                    <label for="content">Contenu</label>
                                 </div>
                             </div>
-                            <div class="row">
-                                <label for="content">Content</label>
-                                <textarea name="content" id="content editor" cols="30" rows="10"
-                                          class="ckeditor"></textarea>
+                            <div class="switch">
+                                <label>
+                                    Prix fixe
+                                    <input type="checkbox" name="to">
+                                    <span class="lever"></span>
+                                    A partir de
+                                </label>
                             </div>
                             <div class="input-field col s12">                                &nbsp;
                                 <button class="btn cyan waves-effect waves-light right" type="submit"
@@ -48,17 +46,20 @@ if(isset($_SESSION['admin']) && $_SESSION['admin'] == true) {
                         </form>
 
                         <?php
-                        if (isset($_POST['titre']) && isset($_POST['content']) && isset($_FILES['couverture'])) {
-                            $titre = $_POST['titre'];
+                        if (isset($_POST['content']) && isset($_POST['prix'])) {
+                            echo 'test';
                             $content = $_POST['content'];
-                            $image = $_FILES['couverture'];
-                            $data->setCouverture($image);
-                            $data->setTitre($titre);
+                            $prix = $_POST['prix'];
+                            $to = $_POST['to'];
+                            $data = new Offre();
+                            $data->setPrix($prix);
                             $data->setContent($content);
-                            var_dump($data->add());
+                            $data->setTo($to);
+                            $data->add();
+
                             ?>
                             <script>
-                               window.location = '/admin/Dashboard';
+                                window.location = '/admin/Offre';
                             </script>
                             <?php
                         }
@@ -68,9 +69,6 @@ if(isset($_SESSION['admin']) && $_SESSION['admin'] == true) {
             </div>
         </div>
     </div>
-
-
-
     <script>
         $(".button-collapse").sideNav();
     </script>

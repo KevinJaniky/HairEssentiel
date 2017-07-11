@@ -1,8 +1,40 @@
 <?php
 
-class Team {
+class Team
+{
+    private $_bdd;
+    private $_content;
+    private $_couverture;
+    private $_identite;
+    private $_error = '';
 
+    public function __construct()
+    {
+        require_once 'conf.php';
+        try {
 
+            $this->_bdd = new PDO("mysql:host=" . HOST . ";dbname=" . DBNAME, USER, MDP);
+            return $this->_bdd;
+        } catch (Exception $e) {
+            die("erreur :" . $e->getMessage());
+        }
+    }
+
+    public function setContent($content)
+    {
+        if (strlen($content) < 2 && strlen($content) > 200) {
+            return $this->_error .= "Content trop court";
+        }
+        return $this->_content = $content;
+    }
+
+    public function setIdentite($identite)
+    {
+        if (strlen($identite) < 5 && strlen($identite) > 200) {
+            return $this->_error .= "Identité trop court";
+        }
+        return $this->_identite = htmlentities($identite);
+    }
 
 
     public function setCouverture($file)
@@ -13,7 +45,7 @@ class Team {
         $poids = $file['size'];
         $code = $file['error'];
         $maxsize = 10485760;
-        $upload = $_SERVER['DOCUMENT_ROOT']."/media/Articles/";
+        $upload = $_SERVER['DOCUMENT_ROOT'] . "/media/equipe/";
         $new_name = bin2hex(rand(0, 15220));
 
         //On récupère l'extension
@@ -61,6 +93,53 @@ class Team {
 
             return $this->_error = 'Erreur Couverture';
         }
-        return $this->_couverture = '/media/Articles/'.$new_name;
+        return $this->_couverture = '/media/equipe/' . $new_name;
     }
+
+    public function select()
+    {
+        $query = $this->_bdd->query('SELECT * FROM equipe');
+        return $query->fetchAll();
+
+    }
+
+    public function selectId($id)
+    {
+        $query = $this->_bdd->query('SELECT * FROM equipe WHERE id =' . $id);
+        return $query->fetch();
+    }
+
+    public function update($id)
+    {
+        $query = $this->_bdd->prepare('UPDATE equipe SET identite =:identite , content =:content WHERE id = :id');
+        $query->execute([
+            'identite'=>$this->_identite,
+            'content'=>$this->_content,
+            'id'=>$id
+        ]);
+    }
+
+    public function updateCouverture($id){
+        $query = $this->_bdd->prepare('UPDATE equipe SET photo =:couverture WHERE id = :id');
+        $query->execute([
+            'couverture'=>$this->_couverture,
+            'id'=>$id
+        ]);
+    }
+
+    public function add()
+    {
+        $query = $this->_bdd->prepare('INSERT INTO equipe(identite,content,photo) VALUES (:id,:content,:pic)');
+        $query->execute([
+            'id'=>$this->_identite,
+            'content'=>$this->_content,
+            'pic'=>$this->_couverture
+        ]);
+    }
+
+    public function delete($id)
+    {
+        $this->_bdd->query('DELETE FROM equipe WHERE id = '.$id);
+    }
+
 }

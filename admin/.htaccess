@@ -5,6 +5,12 @@ RewriteRule ^Connexion$ index.php
 RewriteRule ^Dashboard$ dashboard.php
 RewriteRule ^Add$ add_article.php
 RewriteRule ^Equipe$ team.php
-RewriteRule ^Add-Equipe$ add_team.php
+RewriteRule ^Add-Equipe$ add_equipe.php
 RewriteRule ^Proverbe$ proverbe.php
+RewriteRule ^Modify-Proverbe/([0-9]+)$ mod_proverbe.php?id=$1
+RewriteRule ^Add-Proverbe$ add_proverbe.php
 RewriteRule ^Article/([0-9]+)$ article.php?id=$1
+RewriteRule ^Offre$ offre.php
+RewriteRule ^Modify-Offre/([0-9]+)$ mod_offre.php?id=$1
+RewriteRule ^Add-Offre$ add_offre.php
+RewriteRule ^Modify-Equipe/([0-9]+)$ mod_equipe.php?id=$1

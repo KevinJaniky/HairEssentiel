@@ -118,12 +118,16 @@ class Blog {
     }
 
     public function add(){
-        $query = $this->_bdd->prepare('INSERT INTO blog(titre,couverture,content) VALUES (:titre,:couverture,:content)');
-        $query->execute([
-            'titre'=>$this->_titre,
-            'couverture'=>$this->_couverture,
-            'content'=>$this->_content
-        ]);
+        if(empty($this->_error)) {
+            $query = $this->_bdd->prepare('INSERT INTO blog(titre,couverture,content) VALUES (:titre,:couverture,:content)');
+            $query->execute([
+                'titre'=>$this->_titre,
+                'couverture'=>$this->_couverture,
+                'content'=>$this->_content
+            ]);
+        }else {
+            return $this->_error;
+        }
     }
 
     public function update($id){

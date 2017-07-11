@@ -5,7 +5,7 @@ $display = new Display('Dashboard');
 if(isset($_SESSION['admin']) && $_SESSION['admin'] == true) {
     $display->navTop();
     $display->sideBar();
-    $data  = new Blog();
+    $data  = new Team();
     ?>
     <body class="grey lighten-2">
     <script src="/ressources/ckeditor/ckeditor.js"></script>
@@ -19,8 +19,8 @@ if(isset($_SESSION['admin']) && $_SESSION['admin'] == true) {
                         <form class="col s12" method="post" enctype="multipart/form-data">
                             <div class="row">
                                 <div class="input-field col s12">
-                                    <input id="titre" type="text" name="titre" required>
-                                    <label for="titre">Titre</label>
+                                    <input id="titre" type="text" name="titre" required >
+                                    <label for="titre">Identité</label>
                                 </div>
                             </div>
                             <div class="row">
@@ -48,17 +48,19 @@ if(isset($_SESSION['admin']) && $_SESSION['admin'] == true) {
                         </form>
 
                         <?php
-                        if (isset($_POST['titre']) && isset($_POST['content']) && isset($_FILES['couverture'])) {
+                        if (isset($_POST['titre']) && isset($_POST['content'])) {
                             $titre = $_POST['titre'];
                             $content = $_POST['content'];
                             $image = $_FILES['couverture'];
+
+
                             $data->setCouverture($image);
-                            $data->setTitre($titre);
+                            $data->setIdentite($titre);
                             $data->setContent($content);
-                            var_dump($data->add());
+                            $data->add();
                             ?>
                             <script>
-                               window.location = '/admin/Dashboard';
+                                window.location = '/admin/Equipe';
                             </script>
                             <?php
                         }
@@ -68,9 +70,6 @@ if(isset($_SESSION['admin']) && $_SESSION['admin'] == true) {
             </div>
         </div>
     </div>
-
-
-
     <script>
         $(".button-collapse").sideNav();
     </script>
