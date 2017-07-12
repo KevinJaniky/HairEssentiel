@@ -7,7 +7,7 @@ $(document).ready(function () {
         dots: false,
         items: 1,
         responsiveRefreshRate: true,
-        navText: ['<span class="glyphicon glyphicon-chevron-left"></span>', '<span class="glyphicon glyphicon-chevron-right"></span>'],
+        navText: ['<i class="fa fa-chevron-left"></i>', '<i class="fa fa-chevron-right"></i>'],
         loop: true,
         nav: true,
         responsive: {
@@ -33,7 +33,7 @@ $(document).ready(function () {
         dots: false,
         items: 1,
         responsiveRefreshRate: true,
-        navText: ['<span class="glyphicon glyphicon-chevron-left"></span>', '<span class="glyphicon glyphicon-chevron-right"></span>'],
+        navText: ['<i class="fa fa-chevron-left"></i>', '<i class="fa fa-chevron-right"></i>'],
         loop: true,
         nav: true,
         responsive: {

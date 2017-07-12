@@ -94,6 +94,9 @@ class Display
           <li>
             <a class=\"collapsible-header\" href='/admin/Newsletter'>Newsletter<i class=\"material-icons\">email</i></a>
           </li>
+          <li>
+            <a class=\"collapsible-header\" href='/admin/Newsletter'><i class=\"material-icons\">email</i></a>
+          </li>
         </ul>
   </ul>
         ";

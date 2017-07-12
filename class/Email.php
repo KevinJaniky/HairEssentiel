@@ -7,7 +7,7 @@ class Email {
     private $_obj;
     private $_msg;
     private $_error = "";
-    private $_to = 'kevin.janiky@gmail.com';
+    private $_to = 'hair.essentiel.71@gmail.com';
 
 
 
@@ -256,7 +256,7 @@ class Email {
                                                     <td width="200" valign="top" align="center">
                                                         <div class="contentEditableContainer contentImageEditable">
                                                             <div class="contentEditable" align=\'center\'>
-                                                                <img src="media/favicon.png" width="155" alt=\'Logo\'
+                                                                <img src="/media/favicon.png" width="155" alt=\'Logo\'
                                                                      data-default="placeholder"/>
                                                             </div>
                                                         </div>

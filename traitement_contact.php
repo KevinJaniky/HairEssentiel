@@ -10,7 +10,7 @@ if(isset($_POST['nom']) && isset($_POST['mail']) && isset($_POST['obj']) && isse
     $data->setMessage($_POST['msg']);
     $data->sendMail();
 
-    header('location:/version2/Contact');
+    header('location:/Contact');
     die();
 
 }

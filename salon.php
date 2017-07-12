@@ -84,9 +84,9 @@ $display->Navigation();
                 if ($i % 2 == 0) {
                     ?>
                     <div class="equipe">
-                        <p>
+
                             <?= $team[$i]['content'] ?>
-                        </p>
+
                         <div style="background-image: url(<?= $team[$i]['photo'] ?>)" class="photo_equipe"></div>
                     </div>
                     <?php
@@ -95,9 +95,9 @@ $display->Navigation();
                     ?>
                     <div class="equipe">
                         <div style="background-image: url(<?= $team[$i]['photo'] ?>)" class="photo_equipe"></div>
-                        <p>
+
                             <?= $team[$i]['content'] ?>
-                        </p>
+
                     </div>
                     <?php
                 }

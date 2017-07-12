@@ -26,7 +26,7 @@ h1, h2, h3, h4, h5, h6 {
 header {
   text-align: center;
   padding: 35px;
-  background: url(/version2/media/header.jpg);
+  background: url(/media/header.jpg);
   height: 300px;
   background-size: cover;
   background-position: center; }
@@ -43,13 +43,12 @@ header {
     nav.navbar .container-fluid {
       height: 100%; }
     nav.navbar .navbar-collapse {
-      display: flex !important;
-      /*  @media screen and (max-width: 767px) {
-          display: block !important;
-        }*/ }
+      display: flex !important; }
     nav.navbar ul.navbar-nav {
       flex: 1;
       height: 100%; }
+      nav.navbar ul.navbar-nav:first-child {
+        margin-top: 20px; }
       nav.navbar ul.navbar-nav#nav-princ {
         flex: 3; }
         nav.navbar ul.navbar-nav#nav-princ li {
@@ -419,7 +418,8 @@ footer {
       flex: 2;
       height: 250px;
       background-size: cover;
-      background-position: center; }
+      background-position: center;
+      min-width: 25%; }
       @media screen and (max-width: 600px) {
         .salon .equipe .photo_equipe {
           min-height: 250px;
@@ -518,6 +518,9 @@ footer {
   .preview > img {
     width: 100%;
     height: auto; }
+  .preview img {
+    max-width: 100%;
+    height: auto !important; }
   .preview .content {
     padding: 30px;
     line-height: 30px; }

@@ -41,7 +41,7 @@ class Blog {
     }
 
     public function setContent($content) {
-        if(strlen($content)< 150) {
+        if(strlen($content)< 10) {
             return $this->_error  .= 'Contenu 150 caractères minimum';
         }
         return $this->_content = $content;

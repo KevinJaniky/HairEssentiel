@@ -12,6 +12,7 @@ class Proverbe {
         try {
 
             $this->_bdd = new PDO("mysql:host=".HOST.";dbname=".DBNAME, USER, MDP);
+            $this->_bdd->exec("SET NAMES 'UTF8'");
             return $this->_bdd;
         } catch (Exception $e) {
             die("erreur :" . $e->getMessage());

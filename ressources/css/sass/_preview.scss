@@ -22,6 +22,11 @@
     width:100%;
     height:auto;
   }
+
+  img {
+    max-width: 100%;
+    height:auto !important;
+  }
   .content {
     padding: 30px;
     line-height: 30px;

@@ -7,14 +7,15 @@
     }
     .navbar-collapse {
       display: flex !important;
-      /*  @media screen and (max-width: 767px) {
-          display: block !important;
-        }*/
 
     }
     ul.navbar-nav {
       flex: 1;
       height: 100%;
+
+      &:first-child{
+        margin-top: 20px;
+      }
 
       &#nav-princ {
         flex: 3;

@@ -7,6 +7,11 @@ if (isset($_GET['id'])) {
     $id = $_GET['id'];
     $article = $data->selectId($id);
     $display = new Display($article['titre']);
+
+    if(empty($article)) {
+        header('location:/Accueil');
+        die();
+    }
     ?>
 
     <body>

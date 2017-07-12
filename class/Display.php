@@ -50,9 +50,9 @@ class Display {
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav rs">
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                <li><a href="https://www.facebook.com/carole.hairessentiel"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="https://plus.google.com/+HairEssentielLouhans"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="https://www.youtube.com/channel/UC2CITyz-fN1n8dua_LciScA"><i class="fa fa-youtube"></i></a></li>
             </ul>
 
             <ul class="nav navbar-nav " id="nav-princ">
@@ -97,9 +97,9 @@ class Display {
         </p>
     </div>
     <ul class="reseaux_sociaux">
-       <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
-       <li><a href="#" target="_blank"><i class="fa fa-google-plus"></i></a></li>
-       <li><a href="#" target="_blank"><i class="fa fa-youtube"></i></a></li>
+       <li><a href="https://www.facebook.com/carole.hairessentiel" target="_blank"><i class="fa fa-facebook"></i></a></li>
+       <li><a href="https://plus.google.com/+HairEssentielLouhans" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+       <li><a href="https://www.youtube.com/channel/UC2CITyz-fN1n8dua_LciScA" target="_blank"><i class="fa fa-youtube"></i></a></li>
     </ul>
     <p class="proverbe">
         '.$data['content'].'
@@ -132,9 +132,9 @@ class Display {
         <div class="follow">
             <ul>
                 <li>Me suivre</li>
-                <li><a href="#">Facebook</a></li>
-                <li><a href="#">Twitter</a></li>
-                <li><a href="#">Youtube</a></li>
+                <li><a href="https://www.facebook.com/carole.hairessentiel" target="_blank">Facebook</a></li>
+                <li><a href="https://plus.google.com/+HairEssentielLouhans" target="_blank">Google +</a></li>
+                <li><a href="https://www.youtube.com/channel/UC2CITyz-fN1n8dua_LciScA" target="_blank">Youtube</a></li>
                 <li><a href="http://hairessentiel.com/" target="_blank">Chalon-sur-saone</a></li>
             </ul>
         </div>
