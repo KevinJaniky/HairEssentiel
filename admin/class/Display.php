@@ -95,7 +95,7 @@ class Display
             <a class=\"collapsible-header\" href='/admin/Newsletter'>Newsletter<i class=\"material-icons\">email</i></a>
           </li>
           <li>
-            <a class=\"collapsible-header\" href='/admin/Newsletter'><i class=\"material-icons\">email</i></a>
+            <a class=\"collapsible-header\" href='https://unsplash.com/' target='_blank'>Unsplash<i class=\"material-icons\">perm_media</i></a>
           </li>
         </ul>
   </ul>
