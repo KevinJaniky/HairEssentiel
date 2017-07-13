@@ -72,12 +72,9 @@ class Display {
     public function Carousel(){
         echo '
         <div class="MyCarousel">
-    <div><img src="/media/testcarousel.jpg" alt="Carousel item Image Louhans Coiffeur"></div>
-    <div><img src="/media/test_carousel2.jpg" alt="Carousel item Image Louhans Coiffeur"></div>
-    <div><img src="/media/testcarousel.jpg" alt="Carousel item Image Louhans Coiffeur"></div>
-    <div><img src="/media/test_carousel2.jpg" alt="Carousel item Image Louhans Coiffeur"></div>
-    <div><img src="/media/testcarousel.jpg" alt="Carousel item Image Louhans Coiffeur"></div>
-
+    <div><img src="/media/1.jpg" alt="Carousel item Image Louhans Coiffeur"></div>
+    <div><img src="/media/2.jpg" alt="Carousel item Image Louhans Coiffeur"></div>
+    <div><img src="/media/3.jpg" alt="Carousel item Image Louhans Coiffeur"></div>  
 </div>
         ';
     }

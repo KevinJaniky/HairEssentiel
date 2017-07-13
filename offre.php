@@ -17,10 +17,10 @@ $count = count($price);
         <div class="offre">
             <hgroup>
                 <h2>Nos offres</h2>
-                <h5>"Nos tarifs « all inclusive"</h5>
-                  <h6>Tous les menus coiffure comprennent un soin aux huiles essentielles, un shampooing végétal, un
+                <h5>"Nos tarifs « all inclusive "</h5>
+                  <p>Tous les menus coiffure comprennent un soin aux huiles essentielles, un shampooing végétal, un
                     hydratant et un fixant écologique si tu peux reprendre une image d huiles essentielles de
-                    hairborist</h6>
+                    hairborist</p>
             </hgroup>
             <?php
             for ($i = 0; $i < $count; $i++) {
