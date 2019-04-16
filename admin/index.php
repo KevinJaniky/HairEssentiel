@@ -11,7 +11,6 @@ if(isset($_SESSION['admin']) && $_SESSION['admin'] == true  ){
     die();
 }
 
-echo md5('HairEssentiel71');
 ?>
 
 <style>
